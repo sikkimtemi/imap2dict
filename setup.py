@@ -34,6 +34,7 @@ setup(
     version=VERSION,
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
+    long_description_content_type=LONG_DESCRIPTION_CONTENT_TYPE,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     maintainer=AUTHOR,
