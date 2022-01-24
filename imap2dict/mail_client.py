@@ -84,7 +84,7 @@ class MailClient():
 
     def fetch_mail(self, search_option='UNSEEN', timezone='Asia/Tokyo'):
         '''
-        メールを受信し、内容と添付ファイルの情報をJSON形式で返す。
+        メールを受信し、内容と添付ファイルの情報を辞書形式で返す。
         '''
 
         result = []
