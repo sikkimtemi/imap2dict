@@ -24,6 +24,7 @@ cli = MailClient(host_name, user_id, password)
 # Receive email (`search_option` and `timezone` are optional.)
 messages = cli.fetch_mail(search_option='UNSEEN', timezone='Asia/Tokyo')
 for msg in messages:
+    print('UID: {}'.format(msg['uid']))
     print('Subject: {}'.format(msg['subject']))
     print('Body: {}'.format(msg['body']))
     print('From: {}'.format(msg['from']))

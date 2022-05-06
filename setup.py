@@ -11,7 +11,7 @@ AUTHOR_EMAIL = 'takahashi.taro@takedasystem.com'
 URL = 'https://github.com/sikkimtemi/imap2dict'
 LICENSE = 'MIT'
 DOWNLOAD_URL = URL
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 PYTHON_REQUIRES = '>=3.6'
 INSTALL_REQUIRES = [
     'pytz>=2020.1'

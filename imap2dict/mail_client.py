@@ -100,15 +100,15 @@ class MailClient():
             cli.select()
 
             # 指定されたオプションを用いてメッセージを検索
-            status, data = cli.search(None, search_option)
+            status, data = cli.uid('search', None, search_option)
 
             # 受信エラーの場合は空の結果を返して終了
             if status == 'NO':
                 return result
 
             # メールの解析
-            for num in data[0].split():
-                status, data = cli.fetch(num, '(RFC822)')
+            for uid in data[0].split():
+                status, data = cli.uid('fetch', uid, '(RFC822)')
                 msg = BytesParser(policy=policy.default).parsebytes(data[0][1])
                 msg_id = msg.get('Message-Id', failobj='')
                 from_ = msg.get('From', failobj='')
@@ -126,6 +126,7 @@ class MailClient():
                 body, format_, charset = self._get_main_content(msg)
                 attachments = self._get_attachments(msg)
                 mail_data = {}
+                mail_data['uid'] = uid.decode()
                 mail_data['msg_id'] = msg_id
                 mail_data['header'] = header_text
                 mail_data['from'] = from_
