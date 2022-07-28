@@ -4,30 +4,26 @@
 
 from setuptools import setup
 
-DESCRIPTION = 'imap2dict: Receiving and deleting email on an IMAP4 server.'
-NAME = 'imap2dict'
-AUTHOR = 'TAKAHASHI Taro'
-AUTHOR_EMAIL = 'takahashi.taro@takedasystem.com'
-URL = 'https://github.com/sikkimtemi/imap2dict'
-LICENSE = 'MIT'
+DESCRIPTION = "imap2dict: Receiving and deleting email on an IMAP4 server."
+NAME = "imap2dict"
+AUTHOR = "TAKAHASHI Taro"
+AUTHOR_EMAIL = "takahashi.taro@takedasystem.com"
+URL = "https://github.com/sikkimtemi/imap2dict"
+LICENSE = "MIT"
 DOWNLOAD_URL = URL
-VERSION = '0.1.1'
-PYTHON_REQUIRES = '>=3.6'
-INSTALL_REQUIRES = [
-    'pytz>=2020.1'
+VERSION = "0.1.2"
+PYTHON_REQUIRES = ">=3.6"
+INSTALL_REQUIRES = ["pytz>=2020.1"]
+PACKAGES = ["imap2dict"]
+KEYWORDS = "imap imap4 json"
+CLASSIFIERS = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.6",
 ]
-PACKAGES = [
-    'imap2dict'
-]
-KEYWORDS = 'imap imap4 json'
-CLASSIFIERS=[
-    'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python :: 3.6'
-]
-with open('README.md', 'r', encoding='utf-8') as fp:
+with open("README.md", "r", encoding="utf-8") as fp:
     readme = fp.read()
 LONG_DESCRIPTION = readme
-LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown'
+LONG_DESCRIPTION_CONTENT_TYPE = "text/markdown"
 
 setup(
     name=NAME,
@@ -45,5 +41,5 @@ setup(
     classifiers=CLASSIFIERS,
     license=LICENSE,
     keywords=KEYWORDS,
-    install_requires=INSTALL_REQUIRES
+    install_requires=INSTALL_REQUIRES,
 )
